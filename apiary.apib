@@ -291,6 +291,42 @@ Change user password
             }]
         }
         
+# Group Customer range summary
+## GET /customer/{customerid}/range-summary/{status}
++ Response 200 (application/json)
+
+        {
+            "rangeSummary" : {
+                "active" : ["353", "1831", "1910"],
+                "inactive" : ["180", "182", "254"]
+            }
+            "messages" : [{
+                "logId":"char22",
+                "logItem":22,
+                "category":"char30",
+                "type":"char1",
+                "text":"char220"
+            }]
+        }
+
+# Group Customer range summary by producttype
+## Get /customer/{customerid}/range-summary/{productType}/{status}
++ Response 200 (application/json)
+
+        {
+            "rangeSummary" : {
+                "active" : ["353", "1831", "1910"],
+                "inactive" : ["180", "182", "254"]
+            }
+            "messages" : [{
+                "logId":"char22",
+                "logItem":22,
+                "category":"char30",
+                "type":"char1",
+                "text":"char220"
+            }]
+        }
+        
 # Group Titles
 ## GET /titles
 
