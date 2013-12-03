@@ -207,7 +207,7 @@ Change user password
             "messages" : [{
                 "logId":"char22",
                 "logItem":22,
-                "category":"char30",
+                "category":"char30", 
                 "type":"char1",
                 "text":"char220"
             }]
@@ -328,6 +328,34 @@ Change user password
             }]
         }
         
+
+# Group Delivery Notes
+## Get Customer Delivery Notes [/customer/{customerid}/delivery-note/{date}]
+### GET
++ Response 200 (application/json)
+
+        {
+            "TitleId":"char18",
+            "IssueId":"char18",
+            "CopyNo":"Issue text",
+            "Quantity":1,
+            "RetailPrice":1.5,
+            "RetailValue":2.5,
+            "DiscountPC":50.5,
+            "DiscountGr":12.5,
+            "TaxRate":12.5,
+            "TaxAmount":15.5,
+            "TotalCharges": 50.5,
+            "NetValue":15.2,
+            "Currency":"GBP",
+            "OldPrice":15.2,
+            "NewPrice":12.2,
+            "RecallInfo":"Info",
+            "RecallFlag":"Recall"
+        }
+
+
+
 # Group Titles
 ## GET /titles
 
