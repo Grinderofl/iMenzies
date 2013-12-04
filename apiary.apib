@@ -335,23 +335,46 @@ Change user password
 + Response 200 (application/json)
 
         {
-            "TitleId":"char18",
-            "IssueId":"char18",
-            "CopyNo":"Issue text",
-            "Quantity":1,
-            "RetailPrice":1.5,
-            "RetailValue":2.5,
-            "DiscountPC":50.5,
-            "DiscountGr":12.5,
-            "TaxRate":12.5,
-            "TaxAmount":15.5,
-            "TotalCharges": 50.5,
-            "NetValue":15.2,
-            "Currency":"GBP",
-            "OldPrice":15.2,
-            "NewPrice":12.2,
-            "RecallInfo":"Info",
-            "RecallFlag":"Recall"
+        "CreditNote" : {
+            "CreditNoteId" : "1230409779",
+            "CreditNoteDate" : "2013-03-20T00:00:00",
+            "CreditNoteLines" : [{
+                        "TitleId" : "600",
+                        "IssueId" : "6003017",
+                        "CopyNo" : "18/03/2013",
+                        "Quantity" : 1,
+                        "RetailPrice" : 0.50,
+                        "RetailValue" : 0.0,
+                        "DiscountPC" : 0.0,
+                        "DiscountGR" : -11.75,
+                        "TaxRate" : 0.0,
+                        "TaxAmount" : 0.0,
+                        "TotalCharges" : 0.38,
+                        "NetValue" : 0.38,
+                        "Currency" : "GBP",
+                        "ObjId" : "NCR",
+                        "SubObjId" : "SOL"
+                    }, {
+                        "TitleId" : "9001",
+                        "IssueId" : "90013078",
+                        "CopyNo" : "19/03/2013",
+                        "Quantity" : 24,
+                        "RetailPrice" : 0.40,
+                        "RetailValue" : 0.0,
+                        "DiscountPC" : 0.0,
+                        "DiscountGR" : -9.28,
+                        "TaxRate" : 0.0,
+                        "TaxAmount" : 0.0,
+                        "TotalCharges" : 7.37,
+                        "NetValue" : 7.37,
+                        "Currency" : "GBP",
+                        "ObjId" : "NCR",
+                        "SubObjId" : "SOL"
+                    }
+                ]
+            },
+            "messages" : [],
+            "statusCode" : 200
         }
 
 
