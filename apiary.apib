@@ -328,6 +328,65 @@ Change user password
             }]
         }
         
+# Group Delivery Notes
+## Get Customer Credit Notes [/customer/{customerid}/delivery-note/{date}]
+### GET
++ Response 200 (application/json)
+
+        {
+        "DeliveryNote" : {
+            "DeliveryNoteId" : "1230409779",
+            "DeliveryNoteDate" : "2013-03-20T00:00:00",
+            "DeliveryNoteLines" : [{
+                        "TitleId" : "353",
+                        "IssueId" : "6003017",
+                        "CopyNo" : "18/03/2013",
+                        "Quantity" : 1,
+                        "RetailPrice" : 0.50,
+                        "RetailValue" : 0.0,
+                        "DiscountPC" : 0.0,
+                        "DiscountGR" : -11.75,
+                        "TaxRate" : 0.0,
+                        "TaxAmount" : 0.0,
+                        "TotalCharges" : 0.38,
+                        "NetValue" : 0.38,
+                        "Currency" : "GBP",
+                        "OldPrice":0.32,
+                        "NewPrice":0.32,
+                        "RecallInfo" : "info",
+                        "RecallFlag" : "flag"
+                    }, {
+                        "TitleId" : "353",
+                        "IssueId" : "6003017",
+                        "CopyNo" : "18/03/2013",
+                        "Quantity" : 1,
+                        "RetailPrice" : 0.50,
+                        "RetailValue" : 0.0,
+                        "DiscountPC" : 0.0,
+                        "DiscountGR" : -11.75,
+                        "TaxRate" : 0.0,
+                        "TaxAmount" : 0.0,
+                        "TotalCharges" : 0.38,
+                        "NetValue" : 0.38,
+                        "Currency" : "GBP",
+                        "OldPrice":0.32,
+                        "NewPrice":0.32,
+                        "RecallInfo" : "info",
+                        "RecallFlag" : "flag"
+                    }
+                ]
+            },
+            "messages" : [{
+                "logId":"char22",
+                "logItem":22,
+                "category":"char30",
+                "type":"char1",
+                "text":"char220"
+            }],
+            "statusCode" : 200
+        }
+        
+
 
 # Group Credit Notes
 ## Get Customer Credit Notes [/customer/{customerid}/credit-note/{date}]
