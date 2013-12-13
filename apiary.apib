@@ -442,7 +442,49 @@ Change user password
             "statusCode" : 200
         }
 
+# Group Recall notes
+## Get customer recall notes [/customer/{customerid}/recall-note/{date}]
+### GET
++ Response 200 (application/json)
 
+        {
+            "RecallNote" : {
+                "RecallNoteId" : "6024837867",
+                "RecallNoteDate" : "2013-03-20T00:00:00",
+                "CollectionDate" : "2013-03-21T00:00:00",
+                "RecallNoteLines" : [{
+                        "TitleId" : "43764",
+                        "IssueId" : "437640010",
+                        "CopyNo" : "PART10",
+                        "RetailPrice" : 2.99,
+                        "Currency" : "GBP",
+                        "RecallQuantity" : 7
+                    }, {
+                        "TitleId" : "43764",
+                        "IssueId" : "437640011",
+                        "CopyNo" : "PART11",
+                        "RetailPrice" : 2.99,
+                        "Currency" : "GBP",
+                        "RecallQuantity" : 5
+                    }, {
+                        "TitleId" : "5941",
+                        "IssueId" : "59412163",
+                        "CopyNo" : "19/03/2013",
+                        "RetailPrice" : 0.90,
+                        "Currency" : "GBP",
+                        "RecallQuantity" : 29
+                    }, {
+                        "TitleId" : "38039",
+                        "IssueId" : "380390026",
+                        "CopyNo" : "MAR 13",
+                        "RetailPrice" : 3.50,
+                        "Currency" : "GBP",
+                        "RecallQuantity" : 4
+                    }
+                ]
+            },
+            "messages" : []
+        }
 
 # Group Titles
 ## GET /titles
