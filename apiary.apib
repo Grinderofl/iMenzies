@@ -57,19 +57,6 @@ Change user password
         
 ## GET /branches
 Retrieve branches
-+ Response 500 (application/json)
-
-        {
-            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
-            "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
-        }
-        
-+ Response 400 (application/json)
-
-        {
-            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
-        }
-
 + Response 200 (application/json)
 
         {
@@ -127,6 +114,21 @@ Retrieve branches
           ]
         }
         
++ Response 500 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
+            "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
+        }
+        
++ Response 400 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
+        }
+
+
+        
 ## POST /customer/{customerid}/session
 Retrieve session for user
 + Response 200 (application/json)
@@ -142,18 +144,6 @@ Retrieve session for user
 # Group Customer
 ## Get customer data [/customer/{customerid]
 ### GET
-+ Response 400 (application/json)
-
-        {
-            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
-        }
-        
-+ Response 500 (application/json)
-
-        {
-            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
-            "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
-        }
 + Response 200
 
         {
@@ -172,10 +162,7 @@ Retrieve session for user
             ],
             "messages" : []
         }
-
-
-## Get customer title range [/customer/{customerid}/range/]
-### GET
+        
 + Response 400 (application/json)
 
         {
@@ -188,7 +175,11 @@ Retrieve session for user
             "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
             "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
         }
-        
+
+
+
+## Get customer title range [/customer/{customerid}/range/]
+### GET
 + Response 200 (application/json)
 
         {
@@ -263,9 +254,7 @@ Retrieve session for user
                 "text":"char220"
             }]
         }
-
-## Get customer title range by titleId [/customer/{customerid}/range/{titleid}]
-### GET
+        
 + Response 400 (application/json)
 
         {
@@ -279,6 +268,10 @@ Retrieve session for user
             "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
         }
         
+
+
+## Get customer title range by titleId [/customer/{customerid}/range/{titleid}]
+### GET
 + Response 200 (application/json)
 
         {
@@ -354,8 +347,6 @@ Retrieve session for user
             }]
         }
         
-## Get customer title range by product type [/customer/{customerid}/range/{productType}]
-### GET
 + Response 400 (application/json)
 
         {
@@ -369,6 +360,10 @@ Retrieve session for user
             "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
         }
         
+
+        
+## Get customer title range by product type [/customer/{customerid}/range/{productType}]
+### GET
 + Response 200 (application/json)
 
         {
@@ -444,9 +439,6 @@ Retrieve session for user
             }]
         }
         
-# Group Customer range summary
-## Get customer range summary [/customer/{customerid}/range-summary/{status}]
-### GET
 + Response 400 (application/json)
 
         {
@@ -459,7 +451,12 @@ Retrieve session for user
             "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
             "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
         }
+        
 
+        
+# Group Customer range summary
+## Get customer range summary [/customer/{customerid}/range-summary/{status}]
+### GET
 + Response 200 (application/json)
 
         {
@@ -475,9 +472,7 @@ Retrieve session for user
                 "text":"char220"
             }]
         }
-
-## Get customer range summary by product type and status  [/customer/{customerid}/range-summary/{productType}/{status}]
-### GET
+        
 + Response 400 (application/json)
 
         {
@@ -490,7 +485,11 @@ Retrieve session for user
             "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
             "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
         }
-        
+
+
+
+## Get customer range summary by product type and status  [/customer/{customerid}/range-summary/{productType}/{status}]
+### GET
 + Response 200 (application/json)
 
         {
@@ -507,9 +506,6 @@ Retrieve session for user
             }]
         }
         
-# Group Delivery Notes
-## Get Customer delivery Notes [/customer/{customerid}/delivery-note/{date}]
-### GET
 + Response 400 (application/json)
 
         {
@@ -522,7 +518,12 @@ Retrieve session for user
             "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
             "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
         }
+        
 
+        
+# Group Delivery Notes
+## Get Customer delivery Notes [/customer/{customerid}/delivery-note/{date}]
+### GET
 + Response 200 (application/json)
 
         {
@@ -577,12 +578,6 @@ Retrieve session for user
             }],
             "statusCode" : 200
         }
-        
-
-
-# Group Credit Notes
-## Get Customer Credit Notes [/customer/{customerid}/credit-note/{date}]
-### GET
 + Response 400 (application/json)
 
         {
@@ -595,7 +590,14 @@ Retrieve session for user
             "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
             "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
         }
+
+
         
+
+
+# Group Credit Notes
+## Get Customer Credit Notes [/customer/{customerid}/credit-note/{date}]
+### GET
 + Response 200 (application/json)
 
         {
@@ -646,10 +648,7 @@ Retrieve session for user
             }],
             "statusCode" : 200
         }
-
-# Group Recall notes
-## Get customer recall notes [/customer/{customerid}/recall-note/{date}]
-### GET
+        
 + Response 400 (application/json)
 
         {
@@ -663,6 +662,11 @@ Retrieve session for user
             "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
         }
         
+
+
+# Group Recall notes
+## Get customer recall notes [/customer/{customerid}/recall-note/{date}]
+### GET
 + Response 200 (application/json)
 
         
@@ -742,6 +746,21 @@ Retrieve session for user
             "messages" : []
         }
         
++ Response 400 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
+        }
+        
++ Response 500 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
+            "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
+        }
+        
+
+        
 
 # Group Titles
 ## GET /titles
@@ -756,6 +775,18 @@ Retrieve session for user
         
         
 ## GET /titles/{id}
++ Response 200 (application/json)
+
+        {
+            "Titles":
+            [{
+                "TitleId":"char18",
+                "TitleText":"char40",
+                "ProductType":"MAG"
+            }],
+            "messages":[]
+        }
+        
 + Response 400 (application/json)
 
         {
@@ -769,17 +800,7 @@ Retrieve session for user
             "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
         }
         
-+ Response 200 (application/json)
 
-        {
-            "Titles":
-            [{
-                "TitleId":"char18",
-                "TitleText":"char40",
-                "ProductType":"MAG"
-            }],
-            "messages":[]
-        }
         
 # Group Materials
 
