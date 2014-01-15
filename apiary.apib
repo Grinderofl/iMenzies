@@ -55,6 +55,65 @@ Change user password
 
         {"code":10, "message":"User not found"}
         
+## GET /branches
+Retrieve branches
++ Response 200 (application/json)
+
+        {
+          "Branches": [
+            {
+              "BranchId": "sample string 1",
+              "ParentBranchId": "sample string 2",
+              "Name": "sample string 3",
+              "Street": "sample string 4",
+              "City": "sample string 5",
+              "Country": "sample string 6",
+              "Postcode": "sample string 7"
+            },
+            {
+              "BranchId": "sample string 1",
+              "ParentBranchId": "sample string 2",
+              "Name": "sample string 3",
+              "Street": "sample string 4",
+              "City": "sample string 5",
+              "Country": "sample string 6",
+              "Postcode": "sample string 7"
+            },
+            {
+              "BranchId": "sample string 1",
+              "ParentBranchId": "sample string 2",
+              "Name": "sample string 3",
+              "Street": "sample string 4",
+              "City": "sample string 5",
+              "Country": "sample string 6",
+              "Postcode": "sample string 7"
+            }
+          ],
+          "messages": [
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            }
+          ]
+        }
+        
 
 ## POST /customer/{customerid}/session
 Retrieve session for user
