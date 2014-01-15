@@ -127,7 +127,6 @@ Retrieve branches
           ]
         }
         
-
 ## POST /customer/{customerid}/session
 Retrieve session for user
 + Response 200 (application/json)
@@ -141,6 +140,40 @@ Retrieve session for user
         }
 
 # Group Customer
+## Get customer data [/customer/{customerid}
+### GET
++ Response 400 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
+        }
+        
++ Response 500 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
+            "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
+        }
++ Response 200
+
+        {
+            "Customers" : [{
+                    "CustomerId" : "0000119229",
+                    "ContractBranch" : "560",
+                    "MultipleCode" : "0",
+                    "Name" : "DOUGLAS W.CALDER",
+                    "Street" : "32 MAIN STREET",
+                    "City" : "WEST CALDER",
+                    "Postcode" : "EH55 8DR",
+                    "Country" : "GB",
+                    "Phone" : "01506 871398",
+                    "Email" : ""
+                }
+            ],
+            "messages" : []
+        }
+
+
 ## Get customer title range [/customer/{customerid}/range/]
 ### GET
 + Response 400 (application/json)
