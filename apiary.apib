@@ -4,9 +4,172 @@ HOST: http://wsapi.jm-property.co.uk/v1/
 # iMenzies
 iMenzies API is for managing the *iMenzies* system.
 
-# Orders
-API Description for Orders
 
+# Group Credit Notes
+## Get Customer Credit Notes [/customer/{customerid}/credit-note/{dateOrId}]
+### GET
++ Response 200 (application/json)
+
+        {
+        "CreditNote" : {
+            "CreditNoteId" : "1230409779",
+            "CreditNoteDate" : "2013-03-20T00:00:00",
+            "CreditNoteLines" : [{
+                        "TitleId" : "353",
+                        "IssueId" : "6003017",
+                        "CopyNo" : "18/03/2013",
+                        "Quantity" : 1,
+                        "RetailPrice" : 0.50,
+                        "RetailValue" : 0.0,
+                        "DiscountPC" : 0.0,
+                        "DiscountGR" : -11.75,
+                        "TaxRate" : 0.0,
+                        "TaxAmount" : 0.0,
+                        "TotalCharges" : 0.38,
+                        "NetValue" : 0.38,
+                        "Currency" : "GBP",
+                        "ObjId" : "NCR",
+                        "SubObjId" : "SOL"
+                    }, {
+                        "TitleId" : "1831",
+                        "IssueId" : "90013078",
+                        "CopyNo" : "19/03/2013",
+                        "Quantity" : 24,
+                        "RetailPrice" : 0.40,
+                        "RetailValue" : 0.0,
+                        "DiscountPC" : 0.0,
+                        "DiscountGR" : -9.28,
+                        "TaxRate" : 0.0,
+                        "TaxAmount" : 0.0,
+                        "TotalCharges" : 7.37,
+                        "NetValue" : 7.37,
+                        "Currency" : "GBP",
+                        "ObjId" : "NCR",
+                        "SubObjId" : "SOL"
+                    }
+                ]
+            },
+            "messages" : [{
+                "logId":"char22",
+                "logItem":22,
+                "category":"char30",
+                "type":"char1",
+                "text":"char220"
+            }],
+            "statusCode" : 200
+        }
+        
++ Response 400 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
+        }
+        
++ Response 500 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
+            "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
+        }
+        
+        
+        
+# Group Customer range summary
+## Get customer range summary [/customer/{customerid}/range-summary/{status}]
+### GET
++ Response 200 (application/json)
+
+        {
+            "rangeSummary" : {
+                "active" : ["39084", "5538","42002"],
+                "inactive" : ["180", "182", "254"]
+            },
+            "messages" : [{
+                "logId":"char22",
+                "logItem":22,
+                "category":"char30",
+                "type":"char1",
+                "text":"char220"
+            }]
+        }
+        
++ Response 400 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
+        }
+        
++ Response 500 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
+            "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
+        }
+
+## Get customer range summary by product type or status  [/customer/{customerid}/range-summary/{productTypeOrStatus}]
+### GET
++ Response 200 (application/json)
+
+        {
+            "rangeSummary" : {
+                "active" : ["353", "1831", "1910"],
+                "inactive" : ["180", "182", "254"]
+            },
+            "messages" : [{
+                "logId":"char22",
+                "logItem":22,
+                "category":"char30",
+                "type":"char1",
+                "text":"char220"
+            }]
+        }
+        
++ Response 400 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
+        }
+        
++ Response 500 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
+            "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
+        }
+
+## Get customer range summary by product type and status [/customer/{customerid}/range-summary/{productType}/{status}]
+### GET
++ Response 200 (application/json)
+
+        {
+            "rangeSummary" : {
+                "active" : ["353", "1831", "1910"],
+                "inactive" : ["180", "182", "254"]
+            },
+            "messages" : [{
+                "logId":"char22",
+                "logItem":22,
+                "category":"char30",
+                "type":"char1",
+                "text":"char220"
+            }]
+        }
+        
++ Response 400 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
+        }
+        
++ Response 500 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
+            "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
+        }
+
+
+        
 # Group Customers
 ## GET /branches
 Retrieve branches
@@ -407,70 +570,7 @@ Retrieve session for user
         
 
         
-# Group Customer range summary
-## Get customer range summary [/customer/{customerid}/range-summary/{status}]
-### GET
-+ Response 200 (application/json)
 
-        {
-            "rangeSummary" : {
-                "active" : ["39084", "5538","42002"],
-                "inactive" : ["180", "182", "254"]
-            },
-            "messages" : [{
-                "logId":"char22",
-                "logItem":22,
-                "category":"char30",
-                "type":"char1",
-                "text":"char220"
-            }]
-        }
-        
-+ Response 400 (application/json)
-
-        {
-            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
-        }
-        
-+ Response 500 (application/json)
-
-        {
-            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
-            "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
-        }
-
-
-
-## Get customer range summary by product type and status  [/customer/{customerid}/range-summary/{productType}/{status}]
-### GET
-+ Response 200 (application/json)
-
-        {
-            "rangeSummary" : {
-                "active" : ["353", "1831", "1910"],
-                "inactive" : ["180", "182", "254"]
-            },
-            "messages" : [{
-                "logId":"char22",
-                "logItem":22,
-                "category":"char30",
-                "type":"char1",
-                "text":"char220"
-            }]
-        }
-        
-+ Response 400 (application/json)
-
-        {
-            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
-        }
-        
-+ Response 500 (application/json)
-
-        {
-            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
-            "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
-        }
         
 
         
@@ -548,72 +648,7 @@ Retrieve session for user
         
 
 
-# Group Credit Notes
-## Get Customer Credit Notes [/customer/{customerid}/credit-note/{date}]
-### GET
-+ Response 200 (application/json)
 
-        {
-        "CreditNote" : {
-            "CreditNoteId" : "1230409779",
-            "CreditNoteDate" : "2013-03-20T00:00:00",
-            "CreditNoteLines" : [{
-                        "TitleId" : "353",
-                        "IssueId" : "6003017",
-                        "CopyNo" : "18/03/2013",
-                        "Quantity" : 1,
-                        "RetailPrice" : 0.50,
-                        "RetailValue" : 0.0,
-                        "DiscountPC" : 0.0,
-                        "DiscountGR" : -11.75,
-                        "TaxRate" : 0.0,
-                        "TaxAmount" : 0.0,
-                        "TotalCharges" : 0.38,
-                        "NetValue" : 0.38,
-                        "Currency" : "GBP",
-                        "ObjId" : "NCR",
-                        "SubObjId" : "SOL"
-                    }, {
-                        "TitleId" : "1831",
-                        "IssueId" : "90013078",
-                        "CopyNo" : "19/03/2013",
-                        "Quantity" : 24,
-                        "RetailPrice" : 0.40,
-                        "RetailValue" : 0.0,
-                        "DiscountPC" : 0.0,
-                        "DiscountGR" : -9.28,
-                        "TaxRate" : 0.0,
-                        "TaxAmount" : 0.0,
-                        "TotalCharges" : 7.37,
-                        "NetValue" : 7.37,
-                        "Currency" : "GBP",
-                        "ObjId" : "NCR",
-                        "SubObjId" : "SOL"
-                    }
-                ]
-            },
-            "messages" : [{
-                "logId":"char22",
-                "logItem":22,
-                "category":"char30",
-                "type":"char1",
-                "text":"char220"
-            }],
-            "statusCode" : 200
-        }
-        
-+ Response 400 (application/json)
-
-        {
-            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
-        }
-        
-+ Response 500 (application/json)
-
-        {
-            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
-            "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
-        }
         
 
 
