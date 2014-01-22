@@ -5,8 +5,8 @@ HOST: http://wsapi.jm-property.co.uk/v1/
 iMenzies API is for managing the *iMenzies* system.
 
 
-# Group Credit Notes
-## Get Customer Credit Notes [/customer/{customerid}/credit-note/{dateOrId}]
+# Group Credit Note
+## Get Customer Credit Note by Date or ID [/customer/{customerId}/credit-note/{dateOrId}]
 ### GET
 + Response 200 (application/json)
 
@@ -74,8 +74,8 @@ iMenzies API is for managing the *iMenzies* system.
         
         
         
-# Group Customer range summary
-## Get customer range summary [/customer/{customerid}/range-summary/{status}]
+# Group Range Summary
+## Get customer range summary [/customer/{customerId}/range-summary/{status}]
 ### GET
 + Response 200 (application/json)
 
@@ -106,7 +106,7 @@ iMenzies API is for managing the *iMenzies* system.
             "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
         }
 
-## Get customer range summary by product type or status  [/customer/{customerid}/range-summary/{productTypeOrStatus}]
+## Get customer range summary by product type or status  [/customer/{customerId}/range-summary/{productTypeOrStatus}]
 ### GET
 + Response 200 (application/json)
 
@@ -137,7 +137,7 @@ iMenzies API is for managing the *iMenzies* system.
             "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
         }
 
-## Get customer range summary by product type and status [/customer/{customerid}/range-summary/{productType}/{status}]
+## Get customer range summary by product type and status [/customer/{customerId}/range-summary/{productType}/{status}]
 ### GET
 + Response 200 (application/json)
 
@@ -169,8 +169,690 @@ iMenzies API is for managing the *iMenzies* system.
         }
 
 
+# Group Final Delivery Note
+## Get Final Delivery Notes by Date or Document ID [/customer/{customerId}/final-delivery-note/{dateOrDocumentId}]
+### GET
++ Response 200 (application/json)
+
+        {
+          "DeliveryNote": {
+            "DeliveryNoteDate": "2014-01-22T02:40:14.083107+00:00",
+            "DeliveryNoteLines": [
+              {
+                "TitleId": "sample string 1",
+                "IssueId": "sample string 2",
+                "CopyNo": "sample string 3",
+                "Quantity": 4,
+                "RetailPrice": 5.0,
+                "RetailValue": 6.0,
+                "DiscountPC": 7.0,
+                "DiscountGR": 8.0,
+                "TaxRate": 9.0,
+                "TaxAmount": 10.0,
+                "TotalCharges": 11.0,
+                "NetValue": 12.0,
+                "Currency": "sample string 13",
+                "OldPrice": 14.0,
+                "NewPrice": 15.0,
+                "RecallInfo": "sample string 16",
+                "RecallFlag": "sample string 17",
+                "ObjId": "sample string 18",
+                "SubObjId": "sample string 19"
+              },
+              {
+                "TitleId": "sample string 1",
+                "IssueId": "sample string 2",
+                "CopyNo": "sample string 3",
+                "Quantity": 4,
+                "RetailPrice": 5.0,
+                "RetailValue": 6.0,
+                "DiscountPC": 7.0,
+                "DiscountGR": 8.0,
+                "TaxRate": 9.0,
+                "TaxAmount": 10.0,
+                "TotalCharges": 11.0,
+                "NetValue": 12.0,
+                "Currency": "sample string 13",
+                "OldPrice": 14.0,
+                "NewPrice": 15.0,
+                "RecallInfo": "sample string 16",
+                "RecallFlag": "sample string 17",
+                "ObjId": "sample string 18",
+                "SubObjId": "sample string 19"
+              },
+              {
+                "TitleId": "sample string 1",
+                "IssueId": "sample string 2",
+                "CopyNo": "sample string 3",
+                "Quantity": 4,
+                "RetailPrice": 5.0,
+                "RetailValue": 6.0,
+                "DiscountPC": 7.0,
+                "DiscountGR": 8.0,
+                "TaxRate": 9.0,
+                "TaxAmount": 10.0,
+                "TotalCharges": 11.0,
+                "NetValue": 12.0,
+                "Currency": "sample string 13",
+                "OldPrice": 14.0,
+                "NewPrice": 15.0,
+                "RecallInfo": "sample string 16",
+                "RecallFlag": "sample string 17",
+                "ObjId": "sample string 18",
+                "SubObjId": "sample string 19"
+              }
+            ]
+          },
+          "messages": [
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            }
+          ]
+        }
         
-# Group Customers
++ Response 400 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
+        }
+        
++ Response 500 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
+            "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
+        }
+        
+
+
+# Group Delivery Note
+## Get customer's Delivery Note by Date or ID [/customer/{customerId}/delivery-note/{dateOrDocumentId}]
+### GET
++ Response 200 (application/json)
+
+        {
+          "DeliveryNote": {
+            "DeliveryNoteDate": "2014-01-22T02:42:09.4936048+00:00",
+            "DeliveryNoteLines": [
+              {
+                "TitleId": "sample string 1",
+                "IssueId": "sample string 2",
+                "CopyNo": "sample string 3",
+                "Quantity": 4,
+                "RetailPrice": 5.0,
+                "RetailValue": 6.0,
+                "DiscountPC": 7.0,
+                "DiscountGR": 8.0,
+                "TaxRate": 9.0,
+                "TaxAmount": 10.0,
+                "TotalCharges": 11.0,
+                "NetValue": 12.0,
+                "Currency": "sample string 13",
+                "OldPrice": 14.0,
+                "NewPrice": 15.0,
+                "RecallInfo": "sample string 16",
+                "RecallFlag": "sample string 17",
+                "ObjId": "sample string 18",
+                "SubObjId": "sample string 19"
+              },
+              {
+                "TitleId": "sample string 1",
+                "IssueId": "sample string 2",
+                "CopyNo": "sample string 3",
+                "Quantity": 4,
+                "RetailPrice": 5.0,
+                "RetailValue": 6.0,
+                "DiscountPC": 7.0,
+                "DiscountGR": 8.0,
+                "TaxRate": 9.0,
+                "TaxAmount": 10.0,
+                "TotalCharges": 11.0,
+                "NetValue": 12.0,
+                "Currency": "sample string 13",
+                "OldPrice": 14.0,
+                "NewPrice": 15.0,
+                "RecallInfo": "sample string 16",
+                "RecallFlag": "sample string 17",
+                "ObjId": "sample string 18",
+                "SubObjId": "sample string 19"
+              },
+              {
+                "TitleId": "sample string 1",
+                "IssueId": "sample string 2",
+                "CopyNo": "sample string 3",
+                "Quantity": 4,
+                "RetailPrice": 5.0,
+                "RetailValue": 6.0,
+                "DiscountPC": 7.0,
+                "DiscountGR": 8.0,
+                "TaxRate": 9.0,
+                "TaxAmount": 10.0,
+                "TotalCharges": 11.0,
+                "NetValue": 12.0,
+                "Currency": "sample string 13",
+                "OldPrice": 14.0,
+                "NewPrice": 15.0,
+                "RecallInfo": "sample string 16",
+                "RecallFlag": "sample string 17",
+                "ObjId": "sample string 18",
+                "SubObjId": "sample string 19"
+              }
+            ]
+          },
+          "messages": [
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            }
+          ]
+        }
+
++ Response 400 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
+        }
+        
++ Response 500 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
+            "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
+        }
+
+# Group Customer
+## Get customer title data [/customer/{customerId}]
+### GET
++ Response 200 (application/json)
+
+        {
+          "Customers": [
+            {
+              "CustomerId": "sample string 1",
+              "ContractBranch": "sample string 2",
+              "MultipleCode": "sample string 3",
+              "Name": "sample string 4",
+              "Street": "sample string 5",
+              "City": "sample string 6",
+              "Postcode": "sample string 7",
+              "Country": "sample string 8",
+              "Phone": "sample string 9",
+              "Email": "sample string 10",
+              "statement": true
+            },
+            {
+              "CustomerId": "sample string 1",
+              "ContractBranch": "sample string 2",
+              "MultipleCode": "sample string 3",
+              "Name": "sample string 4",
+              "Street": "sample string 5",
+              "City": "sample string 6",
+              "Postcode": "sample string 7",
+              "Country": "sample string 8",
+              "Phone": "sample string 9",
+              "Email": "sample string 10",
+              "statement": true
+            },
+            {
+              "CustomerId": "sample string 1",
+              "ContractBranch": "sample string 2",
+              "MultipleCode": "sample string 3",
+              "Name": "sample string 4",
+              "Street": "sample string 5",
+              "City": "sample string 6",
+              "Postcode": "sample string 7",
+              "Country": "sample string 8",
+              "Phone": "sample string 9",
+              "Email": "sample string 10",
+              "statement": true
+            }
+          ],
+          "messages": [
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            }
+          ]
+        }
+        
++ Response 400 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
+        }
+        
++ Response 500 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
+            "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
+        }
+
+        
+# Group Allocation Note
+## Get allocation note [/customer/{customerId}/allocation-note/{date}
+### GET
++ Response 200 (application/json)
+
+        {
+          "AllocationNote": {
+            "AllocationNoteDate": "2014-01-22T02:47:05.7894439+00:00",
+            "AllocationNoteLines": [
+              {
+                "TitleId": "sample string 1",
+                "IssueId": "sample string 2",
+                "CopyNo": "sample string 3",
+                "ObjId": "sample string 4",
+                "SubObjId": "sample string 5",
+                "RetailPrice": 6.0,
+                "Currency": "sample string 7",
+                "NewQuantity": 8,
+                "SaleQuantity1": 9,
+                "SaleQuantity2": 10,
+                "SaleQuantity3": 11,
+                "HonouredStatus": "sample string 12",
+                "InfoText": "sample string 13"
+              },
+              {
+                "TitleId": "sample string 1",
+                "IssueId": "sample string 2",
+                "CopyNo": "sample string 3",
+                "ObjId": "sample string 4",
+                "SubObjId": "sample string 5",
+                "RetailPrice": 6.0,
+                "Currency": "sample string 7",
+                "NewQuantity": 8,
+                "SaleQuantity1": 9,
+                "SaleQuantity2": 10,
+                "SaleQuantity3": 11,
+                "HonouredStatus": "sample string 12",
+                "InfoText": "sample string 13"
+              },
+              {
+                "TitleId": "sample string 1",
+                "IssueId": "sample string 2",
+                "CopyNo": "sample string 3",
+                "ObjId": "sample string 4",
+                "SubObjId": "sample string 5",
+                "RetailPrice": 6.0,
+                "Currency": "sample string 7",
+                "NewQuantity": 8,
+                "SaleQuantity1": 9,
+                "SaleQuantity2": 10,
+                "SaleQuantity3": 11,
+                "HonouredStatus": "sample string 12",
+                "InfoText": "sample string 13"
+              }
+            ]
+          },
+          "messages": [
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            }
+          ]
+        }
+        
++ Response 400 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
+        }
+        
++ Response 500 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
+            "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
+        }
+        
+
+# Group Invoice
+## Get invoice by Date or ID [/customer/{customerId}/invoice/{dateOrId}]
+### GET
++  Response 200 (application/json)
+
+        {
+          "Invoice": {
+            "InvoiceDate": "2014-01-22T02:48:41.0550686+00:00",
+            "InvoiceLines": [
+              {
+                "DeliveryNoteID": "sample string 1",
+                "Day": "sample string 2",
+                "Date": "2014-01-22T02:48:41.0550686+00:00",
+                "RetailValue": 4.0,
+                "NetValue": 5.0,
+                "VATValue": 6.0,
+                "Charges": 7.0,
+                "Credits": 8.0,
+                "GrossValue": 9.0,
+                "Percent": 10.0,
+                "ObjId": "sample string 11",
+                "SubObjId": "sample string 12"
+              },
+              {
+                "DeliveryNoteID": "sample string 1",
+                "Day": "sample string 2",
+                "Date": "2014-01-22T02:48:41.0550686+00:00",
+                "RetailValue": 4.0,
+                "NetValue": 5.0,
+                "VATValue": 6.0,
+                "Charges": 7.0,
+                "Credits": 8.0,
+                "GrossValue": 9.0,
+                "Percent": 10.0,
+                "ObjId": "sample string 11",
+                "SubObjId": "sample string 12"
+              },
+              {
+                "DeliveryNoteID": "sample string 1",
+                "Day": "sample string 2",
+                "Date": "2014-01-22T02:48:41.0550686+00:00",
+                "RetailValue": 4.0,
+                "NetValue": 5.0,
+                "VATValue": 6.0,
+                "Charges": 7.0,
+                "Credits": 8.0,
+                "GrossValue": 9.0,
+                "Percent": 10.0,
+                "ObjId": "sample string 11",
+                "SubObjId": "sample string 12"
+              }
+            ],
+            "InvoiceId": "sample string 1",
+            "InvoiceWeekNo": "sample string 2",
+            "InvoiceCurrency": "sample string 3"
+          },
+          "messages": [
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            }
+          ]
+        }
+
++ Response 400 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
+        }
+        
++ Response 500 (application/json)
+
+        {
+            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
+            "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
+        }
+        
+
+# Group Document Overview
+## Get documents by ID [/customer/{customerid}/documents/{docid}]
+### GET
++ Response 200 (application/json)
+
+        {
+          "DocumentOverview": {
+            "DocOverviewLines": [
+              {
+                "DocId": "sample string 1",
+                "DocDate": "sample string 2",
+                "DocType": "sample string 3"
+              },
+              {
+                "DocId": "sample string 1",
+                "DocDate": "sample string 2",
+                "DocType": "sample string 3"
+              },
+              {
+                "DocId": "sample string 1",
+                "DocDate": "sample string 2",
+                "DocType": "sample string 3"
+              }
+            ]
+          },
+          "messages": [
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            }
+          ]
+        }
+
++ Response 404 (application/json)
+
+        {
+            "Message" : "Customer 11929 does not exist",
+            "MessageDetail" : "KjuMoIlZ5r3X08002Z81PW 1 ZCX_CAPI_NO_CUSTOMER E"
+        }
+        
+## Get documents by startdate and endate and document type [/customer/{customerId}/documents/{startDate}/{endDate}]
+### GET 
++ Response 200 (application/json)
+
+        {
+          "DocumentOverview": {
+            "DocOverviewLines": [
+              {
+                "DocId": "sample string 1",
+                "DocDate": "sample string 2",
+                "DocType": "sample string 3"
+              },
+              {
+                "DocId": "sample string 1",
+                "DocDate": "sample string 2",
+                "DocType": "sample string 3"
+              },
+              {
+                "DocId": "sample string 1",
+                "DocDate": "sample string 2",
+                "DocType": "sample string 3"
+              }
+            ]
+          },
+          "messages": [
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            }
+          ]
+        }
+
++ Response 404 (application/json)
+
+        {
+            "Message" : "Customer 11929 does not exist",
+            "MessageDetail" : "KjuMoIlZ5r3X08002Z81PW 1 ZCX_CAPI_NO_CUSTOMER E"
+        }
+
+# Group Titles
+## Get Title [/titles/{titleId}]
+### GET
++ Response 200 (application/json)
+        
+        {
+          "Titles": [
+            {
+              "TitleId": "sample string 1",
+              "TitleText": "sample string 2",
+              "ProductType": "sample string 3",
+              "Frequency": "sample string 4",
+              "ProdHier": "sample string 5"
+            },
+            {
+              "TitleId": "sample string 1",
+              "TitleText": "sample string 2",
+              "ProductType": "sample string 3",
+              "Frequency": "sample string 4",
+              "ProdHier": "sample string 5"
+            },
+            {
+              "TitleId": "sample string 1",
+              "TitleText": "sample string 2",
+              "ProductType": "sample string 3",
+              "Frequency": "sample string 4",
+              "ProdHier": "sample string 5"
+            }
+          ],
+          "messages": [
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            }
+          ]
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Group Branches
 ## GET /branches
 Retrieve branches
 + Response 200 (application/json)
@@ -257,40 +939,7 @@ Retrieve session for user
             "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
         }
 
-# Group Customer
-## Get customer data [/customer/{customerid}]
-### GET
-+ Response 200
 
-        {
-            "Customers" : [{
-                    "CustomerId" : "0000119229",
-                    "ContractBranch" : "560",
-                    "MultipleCode" : "0",
-                    "Name" : "Name",
-                    "Street" : "Someone",
-                    "City" : "City",
-                    "Postcode" : "EH55 8ER",
-                    "Country" : "GB",
-                    "Phone" : "66658946",
-                    "Email" : ""
-                }
-            ],
-            "messages" : []
-        }
-        
-+ Response 400 (application/json)
-
-        {
-            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:"
-        }
-        
-+ Response 500 (application/json)
-
-        {
-            "Message":"Credit note not found for customer: 119229 and date: 15.01.2013 annd id:",
-            "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
-        }
 
 
 
