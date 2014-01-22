@@ -8,53 +8,6 @@ iMenzies API is for managing the *iMenzies* system.
 API Description for Orders
 
 # Group Customers
-## POST /users/register
-Register a new user.
-+ Request (application/json)
-
-        [{"username":"username", "password":"password", "email":"e-mail"}]
-
-+ Response 200 (application/json)
-        
-        [{"id":1}]
-
-+ Response 409 (application/json)
-
-        [{"code":1, "message":"Duplicate username"}]
-        [{"code":2, "message":"Duplicate e-mail"}]
-
-## POST /users/login
-Login a user
-+ Request (application/json)
-
-        {"username":"username", "password":"password"}
-        
-+ Response 200 (application/json)
-        
-        {"id":"00112233", "created":"2013-11-20T10:45:35.511Z", "lastlogin":"2013-11-20T10:45:36.511Z", "email":"user@domain.com"}
-
-+ Response 404 (application/json)
-
-        {"code":10, "message":"User not found"}
-        
-+ Response 409 (application/json)
-
-        {"code":11, "message":"Invalid password"}
-
-## POST /users/changepassword
-Change user password
-+ Request (application/json)
-
-        {"username":"username", "password":"password"}
-        
-+ Response 200 (application/json)
-
-        {}
-
-+ Response 404 (application/json)
-
-        {"code":10, "message":"User not found"}
-        
 ## GET /branches
 Retrieve branches
 + Response 200 (application/json)
