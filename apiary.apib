@@ -1700,4 +1700,40 @@ Retrieve branches
         }
 
 
+# Group MultipleCodes
+## GET [/multiples]
++ Response 200 (application/json)
+
+        {
+            "Multiples" : [{
+                    "MultipleCode" : "0",
+                    "Name" : "INDEPENDENTS"
+                }, {
+                    "MultipleCode" : "1",
+                    "Name" : "ASDA SUPERSTORES"
+                }, {
+                    "MultipleCode" : "10",
+                    "Name" : "WHS TRAVEL U/GROUND"
+                }, {
+                    "MultipleCode" : "100",
+                    "Name" : "BELLS STORES"
+                }, {
+                    "MultipleCode" : "1000",
+                    "Name" : "ARAMARK LUCID"
+                }, {
+                    "MultipleCode" : "1001",
+                    "Name" : "BESTWAY"
+                }
+            ]
+        }
+        
+# Group Groups
+## GET [/customer/groups]
++ Response 200 (application/json)
+
+        {
+            "customerGroup" : ["100", "220", "240", "260", "380"]
+        }
+        
+
         
