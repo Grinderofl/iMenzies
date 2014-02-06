@@ -786,6 +786,59 @@ iMenzies API is for managing the *iMenzies* system.
         }
 
 # Group Titles
+## Get all titles [/titles]
+### GET
++ Response 200 (application/json)
+    
+        {
+          "Titles": [
+            {
+              "TitleId": "sample string 1",
+              "TitleText": "sample string 2",
+              "ProductType": "MAG",
+              "Frequency": "sample string 4",
+              "ProdHier": "sample string 5"
+            },
+            {
+              "TitleId": "sample string 1",
+              "TitleText": "sample string 2",
+              "ProductType": "MAG",
+              "Frequency": "sample string 4",
+              "ProdHier": "sample string 5"
+            },
+            {
+              "TitleId": "sample string 1",
+              "TitleText": "sample string 2",
+              "ProductType": "MAG",
+              "Frequency": "sample string 4",
+              "ProdHier": "sample string 5"
+            }
+          ],
+          "messages": [
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            }
+          ]
+        }
+
 ## Get Title [/titles/{titleId}]
 ### GET
 + Response 200 (application/json)
