@@ -892,6 +892,171 @@ iMenzies API is for managing the *iMenzies* system.
           ]
         }
 
+## Get Product Hierarchy [/titles/hierarchy]
+### GET
++ Response 200 (application/json)
+
+        {
+          "Hierarchies": [
+            {
+              "prodHier": "sample string 1",
+              "level": "sample string 2",
+              "description": "sample string 3"
+            },
+            {
+              "prodHier": "sample string 1",
+              "level": "sample string 2",
+              "description": "sample string 3"
+            },
+            {
+              "prodHier": "sample string 1",
+              "level": "sample string 2",
+              "description": "sample string 3"
+            }
+          ],
+          "messages": [
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            }
+          ]
+        }
+
+## Get Title Changes [/titles/title-changes]
+### GET
++ Response 200 (application/json)
+
+        {
+          "TitleChanges": [
+            {
+              "TitleId": "sample string 1",
+              "IssueId": "sample string 2",
+              "Branch": "sample string 3",
+              "CopyNo": "sample string 4",
+              "OnSaleDate": "2014-02-10T12:15:55.6240384+00:00",
+              "OnSaleOld": "2014-02-10T12:15:55.6250383+00:00",
+              "Price": "sample string 7",
+              "PriceOld": "sample string 8"
+            },
+            {
+              "TitleId": "sample string 1",
+              "IssueId": "sample string 2",
+              "Branch": "sample string 3",
+              "CopyNo": "sample string 4",
+              "OnSaleDate": "2014-02-10T12:15:55.6240384+00:00",
+              "OnSaleOld": "2014-02-10T12:15:55.6250383+00:00",
+              "Price": "sample string 7",
+              "PriceOld": "sample string 8"
+            },
+            {
+              "TitleId": "sample string 1",
+              "IssueId": "sample string 2",
+              "Branch": "sample string 3",
+              "CopyNo": "sample string 4",
+              "OnSaleDate": "2014-02-10T12:15:55.6240384+00:00",
+              "OnSaleOld": "2014-02-10T12:15:55.6250383+00:00",
+              "Price": "sample string 7",
+              "PriceOld": "sample string 8"
+            }
+          ],
+          "messages": [
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            }
+          ]
+        }
+
+## Get Recalled Issues [/titles/recalled-issues]
+### GET
++ Response 200 (application/json)
+
+        {
+          "RecalledIssues": [
+            {
+              "TitleId": "sample string 1",
+              "IssueId": "sample string 2",
+              "Branch": "sample string 3",
+              "CopyNo": "sample string 4",
+              "OnSaleDate": "2014-02-10T12:06:24.349394+00:00",
+              "OffSaleDate": "2014-02-10T12:06:24.349394+00:00"
+            },
+            {
+              "TitleId": "sample string 1",
+              "IssueId": "sample string 2",
+              "Branch": "sample string 3",
+              "CopyNo": "sample string 4",
+              "OnSaleDate": "2014-02-10T12:06:24.349394+00:00",
+              "OffSaleDate": "2014-02-10T12:06:24.349394+00:00"
+            },
+            {
+              "TitleId": "sample string 1",
+              "IssueId": "sample string 2",
+              "Branch": "sample string 3",
+              "CopyNo": "sample string 4",
+              "OnSaleDate": "2014-02-10T12:06:24.349394+00:00",
+              "OffSaleDate": "2014-02-10T12:06:24.349394+00:00"
+            }
+          ],
+          "messages": [
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            }
+          ]
+        }
+
 # Group Recall Note
 ## Get customer recall note by date [/customer/{customerId}/recall-note/{date}]
 ### GET
