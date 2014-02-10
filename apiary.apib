@@ -467,7 +467,7 @@ iMenzies API is for managing the *iMenzies* system.
             }
           ]
         }
-        
+
 + Response 400 (application/json)
 
         {
@@ -481,6 +481,71 @@ iMenzies API is for managing the *iMenzies* system.
             "MessageDetail":"KfvXqYTTHM3X08002Z81PW 1 ZCX_CAPI_CRED_NOTE_NOT_FOUND E"
         }
 
+
+## Get Customer Groups [/customer/groups]
+### POST
++ Request (application/json)
+        
+        {
+          "branches": [
+            "sample string 1",
+            "sample string 2",
+            "sample string 3"
+          ],
+          "routes": [
+            "sample string 1",
+            "sample string 2",
+            "sample string 3"
+          ],
+          "multipleCodes": [
+            "sample string 1",
+            "sample string 2",
+            "sample string 3"
+          ],
+          "postcodes": [
+            "sample string 1",
+            "sample string 2",
+            "sample string 3"
+          ],
+          "titleIds": [
+            "sample string 1",
+            "sample string 2",
+            "sample string 3"
+          ]
+        }
+        
++ Response 200 (application/json)
+
+        {
+          "customerGroup": [
+            "sample string 1",
+            "sample string 2",
+            "sample string 3"
+          ],
+          "messages": [
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            },
+            {
+              "LogId": "sample string 1",
+              "LogItem": 2,
+              "Category": "sample string 3",
+              "Type": "sample string 4",
+              "Text": "sample string 5"
+            }
+          ]
+        }
         
 # Group Allocation Note
 ## Get allocation note [/customer/{customerId}/allocation-note/{date}]
