@@ -2650,3 +2650,20 @@ Retrieve branches
             ]
         }
 
+
+# Group Claims
+## POST /customer/{customerId}/{noteType}/claim/{date}
++ Request (application/json)
+
+        {
+        "ClaimItems":[
+        {"IssueId":"40662156","ClaimType":"undercr","ClaimQuantity":"6","ReasonText":"webservice test"},
+        {"IssueId":"44052162","ClaimType":"requery","ClaimQuantity":"1","ReasonText":"webservice test"}
+        ]
+        }
+        
++ Response 200 (application/json)
+
+        
+        {}
+        
